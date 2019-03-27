@@ -1,0 +1,55 @@
+"""
+Grader
+
+10.0/10.0 points (ungraded)
+
+A regular polygon has n number of sides. Each side has length s.
+
+The area of a regular polygon is: 0.25*n*s**(2)/tan*(pi/n)
+
+The perimeter of a polygon is: length of the boundary of the polygon
+Write a function called polysum that takes 2 arguments, n and s. 
+This function should sum the area and square of the perimeter of the regular polygon. 
+The function returns the sum, rounded to 4 decimal places.
+
+"""
+
+# My code:
+
+import math
+
+def polysum(n, s):
+    """A regular polygon has n number of sides. Each side has length s.
+    The area of a regular polygon is: 
+    The perimeter of a polygon is: length of the boundary of the polygon
+    Write a function called polysum that takes 2 arguments, n and s. 
+    This function should sum the area and square of the perimeter of the regular polygon. 
+    The function returns the sum, rounded to 4 decimal places."""
+    
+    area = (0.25*n*s*s) / (math.tan(math.pi/n))
+    sum = area + (n*s) * (n*s)
+    return round(sum, 4)
+    
+    
+    # Test inputs are:
+    
+    #Test: polysum(32, 98)     output:10614584.3872
+    #Test: polysum(7, 97)      output:495232.4822
+    #Test: polysum(42, 5)      output:47602.8191
+    #Test: polysum(54, 78)     output:19151130.3194
+    #Test: polysum(35, 63)     output:5247893.0158
+    #Test: polysum(25, 81)     output:4425222.8925
+    #Test: polysum(30, 4)      ouptut:15541.7237
+    #Test: polysum(91, 45)     output:18102931.4239
+    #Test: polysum(88, 49)     output:20072326.6694
+    #Test: polysum(54, 94)     output:27813837.525
+    
+    # Passed all test inputs. Running successfully!
+    
+    
+    
+    
+    
+    
+    
+
