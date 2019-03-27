@@ -1,0 +1,40 @@
+"""
+
+Exercise: odd
+
+5.0/5.0 points (graded)
+
+ESTIMATED TIME TO COMPLETE: 3 minutes
+
+Write a Python function, odd, that takes in one number and returns True when the number is odd and False otherwise.
+
+You should use the % (mod) operator, not if.
+
+This function takes in one number and returns a boolean.
+
+#Code:
+
+def odd(x):
+    '''
+    x: int
+
+    returns: True if x is odd, False otherwise
+    '''
+   
+    return (x %2 == 1)
+    
+    
+#Test numbers are:
+
+#Test: odd(80)   output:False
+#Test: odd(81)   output:True
+#Test: odd(-14)  output:False
+#Test: odd(-13)  output:True
+#Test: odd(30)   output:False
+#Test: odd(31)   output:True
+#Test: odd(-2)   output:False
+#Test: odd(-1)   output:True
+#Test: odd(34)   output:False
+#Test: odd(35)   output:True
+
+#Code is running successfully!
