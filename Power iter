@@ -1,0 +1,44 @@
+"""
+Exercise: iter power
+
+5.0/5.0 points (graded)
+
+ESTIMATED TIME TO COMPLETE: 6 minutes
+
+Write an iterative function iterPower(base, exp) that calculates the exponential  by simply using successive multiplication. 
+For example, iterPower(base, exp) should compute  by multiplying base times itself exp times. Write such a function below.
+
+This function should take in two values - base can be a float or an integer; exp will be an integer  0. 
+It should return one numerical value. Your code must be iterative - use of the ** operator is not allowed.
+"""
+
+#My code:
+
+def iterPower(base, exp):
+    '''
+    base: int or float.
+    exp: int >= 0
+ 
+    returns: int or float, base^exp
+    '''
+    result = 1
+    while exp>0:
+        result = base * result
+        exp = exp - 1
+    return result
+    
+    
+    
+   #Test numbers are:
+   
+   #Test: iterPower(9.64, 0)     output:1.0000
+   #Test: iterPower(-2.96, 7)    output:-1990.8658
+   #Test: iterPower(-4.17, 1)    output:-4.1700
+   #Test: iterPower(-4.75, 7)    output:-54557.6013
+   #Test: iterPower(-6.85, 2)    output:46.9225
+   #Test: iterPower(-6.69, 3)    output:-299.4183
+   #Test: iterPower(5.82, 3)     output:197.1374
+   #Test: iterPower(-4.46, 8)    output:156559.2996
+   
+   
+   # Code passed all test numbers. Running successfully!
