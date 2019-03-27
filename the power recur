@@ -1,0 +1,45 @@
+"""
+Exercise: power recur
+
+5.0/5.0 points (graded)
+
+ESTIMATED TIME TO COMPLETE: 7 minutes
+
+In Problem 1, we computed an exponential by iteratively executing successive multiplications. 
+We can use the same idea, but in a recursive function.
+
+Write a function recurPower(base, exp) which computes  by recursively calling itself to solve a smaller version of the same problem, 
+and then multiplying the result by base to solve the initial problem.
+
+This function should take in two values - base can be a float or an integer; exp will be an integer . 
+It should return one numerical value. Your code must be recursive - use of the ** operator or looping constructs is not allowed.
+
+"""
+
+# My code:
+
+def recurPower(base, exp):
+    '''
+    base: int or float.
+    exp: int >= 0
+ 
+    returns: int or float, base^exp
+    '''
+    if exp == 0:
+        return 1
+    else:
+       return base * recurPower(base,(exp-1))
+       
+       
+  #Test numbers are:
+  
+  #Test: recurPower(-7.18, 0)    output:1.0000
+  #Test: recurPower(1.33, 4)     output:3.1290
+  #Test: recurPower(6.05, 10)    output:65698241.6926
+  #Test: recurPower(6.28, 5)     output:9767.8328
+  #Test: recurPower(-2.51, 5)    output:-99.6251
+  #Test: recurPower(6.48, 6)     output:74037.2084
+  #Test: recurPower(-9.75, 4)    output:9036.8789
+  #Test: recurPower(8.88, 3)     output:700.2271
+  
+  # Code passed all test numbers. Running successfully!
