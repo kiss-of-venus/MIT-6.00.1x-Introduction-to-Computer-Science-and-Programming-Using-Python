@@ -1,0 +1,107 @@
+"""
+For this problem, you will need the code files ps3_hangman.py and words.txt. 
+"""
+ """
+Problem 1 - Is the Word Guessed
+0.0/10.0 points (graded)
+Please read the Hangman Introduction before starting this problem. We'll start by writing 3 simple functions that will help 
+us easily code the Hangman problem. First, implement the function isWordGuessed that takes in two parameters - a string, secretWord, 
+and a list of letters, lettersGuessed. This function returns a boolean - True if secretWord has been guessed 
+(ie, all the letters of secretWord are in lettersGuessed) and False otherwise.
+
+Example Usage:
+
+>>> secretWord = 'apple' 
+>>> lettersGuessed = ['e', 'i', 'k', 'p', 'r', 's']
+>>> print(isWordGuessed(secretWord, lettersGuessed))
+False
+For this function, you may assume that all the letters in secretWord and lettersGuessed are lowercase.
+"""
+
+
+
+# Hangman game
+#
+
+# -----------------------------------
+# Helper code
+# You don't need to understand this helper code,
+# but you will have to know how to use the functions
+# (so be sure to read the docstrings!)
+
+import random
+
+WORDLIST_FILENAME = "words.txt"
+
+def loadWords():
+    """
+    Returns a list of valid words. Words are strings of lowercase letters.
+    
+    Depending on the size of the word list, this function may
+    take a while to finish.
+    """
+    print("Loading word list from file...")
+    # inFile: file
+    inFile = open(WORDLIST_FILENAME, 'r')
+    # line: string
+    line = inFile.readline()
+    # wordlist: list of strings
+    wordlist = line.split()
+    print("  ", len(wordlist), "words loaded.")
+    return wordlist
+
+def chooseWord(wordlist):
+    """
+    wordlist (list): list of words (strings)
+
+    Returns a word from wordlist at random
+    """
+    return random.choice(wordlist)
+
+# end of helper code
+# -----------------------------------
+
+# Load the list of words into the variable wordlist
+# so that it can be accessed from anywhere in the program
+wordlist = loadWords()
+
+# My code:
+
+
+def isWordGuessed(secretWord, lettersGuessed):
+    '''
+    secretWord: string, the word the user is guessing
+    lettersGuessed: list, what letters have been guessed so far
+    returns: boolean, True if all the letters of secretWord are in lettersGuessed;
+      False otherwise
+    '''
+    
+    for i in secretWord:
+        if i not in lettersGuessed:
+            return False
+    return True
+    
+   
+    # Output:
+    
+    runfile('C:/Users/Hp/Downloads/ps3_hangman.py', wdir='C:/Users/Hp/Downloads')
+Loading word list from file...
+   55909 words loaded.
+
+secretWord = 'apple' 
+>>> lettersGuessed = ['e', 'i', 'k', 'p', 'r', 's']
+>>> print(isWordGuessed(secretWord, lettersGuessed))
+False
+
+
+runfile('C:/Users/Hp/python script/biggest in dictionary.py', wdir='C:/Users/Hp/python script')
+
+secretWord='sek'
+
+lettersGuessed = ['e', 'i', 'k', 'p', 'r', 's']
+>>> print(isWordGuessed(secretWord, lettersGuessed))
+True
+
+#Correct
+
+
