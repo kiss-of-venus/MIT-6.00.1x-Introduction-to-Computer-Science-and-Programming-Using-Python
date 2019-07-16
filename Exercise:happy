@@ -1,0 +1,61 @@
+Exercise: happy
+ Bookmark this page
+Exercise: happy
+5/5 points (graded)
+ESTIMATED TIME TO COMPLETE: 3 minutes
+
+Write a piece of Python code that prints out the string 'hello world' if the value of an integer variable, happy, is strictly greater than 2.
+
+Do not ask for user input
+Code Editor
+
+None
+
+if happy > 2:
+
+    print('hello world')
+    
+Press ESC then TAB or click outside of the code editor to exit
+Correct
+
+
+
+Test results
+
+CORRECT Hide outputHide output
+happy = 1
+Output:
+happy = 2
+Output:
+happy = 3
+Output:
+hello world
+
+happy = 4
+Output:
+hello world
+
+happy = 82
+Output:
+hello world
+
+happy = 46
+Output:
+hello world
+
+happy = 19
+Output:
+hello world
+
+happy = -90
+Output:
+happy = -58
+Output:
+happy = 64
+Output:
+hello world
+
+Submit Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
+
+Correct
+
